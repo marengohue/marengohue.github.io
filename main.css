@@ -1,0 +1,144 @@
+.card-container {
+  list-style: none;
+  height: 287px;
+  width: 207px;
+}
+.card-container.absolute {
+  position: absolute;
+}
+.card-container.stacked {
+  transition: 0.3s;
+  position: relative;
+  display: inline-block;
+  margin-left: -200px;
+}
+.card-container.stacked:hover {
+  bottom: 135px;
+  z-index: 3;
+}
+.card-container:hover:not(.highlighted) .card-front,
+.card-container:hover:not(.highlighted) .card-back {
+  box-shadow: 0px 0px 10px 10px gold;
+}
+.card-container:hover .card-front,
+.card-container:hover .card-back {
+  cursor: pointer;
+}
+.card-container.highlighted .card-front,
+.card-container.highlighted .card-back {
+  box-shadow: 0px 0px 10px 10px green;
+  cursor: pointer;
+}
+.card-container .card-front,
+.card-container .card-back {
+  transition: 0.3s;
+  border-radius: 10px;
+  border-bottom: 3px solid #381C00;
+  border-right: 3px solid #381C00;
+  border-left: 1px solid #381C00;
+  background-color: #1C0E00;
+  padding: 10px 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 20px);
+}
+.card-container .card-back {
+  color: #381C00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container .card-back .image {
+  font-size: 231px;
+  margin: 0;
+  color: #381C00;
+}
+.card-container .card-front {
+  color: gold;
+}
+.card-container .card-front figure.image {
+  text-align: center;
+  font-size: 100px;
+  margin: 0;
+  color: gold;
+}
+.card-container .card-front span.card-title {
+  text-align: center;
+  display: block;
+  font-size: 24px;
+}
+.card-container .card-front p.text {
+  color: #E07000;
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+.card-container .card-front.item span.card-value {
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+.world-map {
+  position: relative;
+  padding: 0;
+  margin-bottom: 200px;
+  width: calc(100% - 50px);
+  transform: scale(0.35);
+  transform-origin: 0 0 0;
+}
+.deck {
+  position: fixed;
+  bottom: -150px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  background-color: #AA947C;
+  background: url(02c1de67bd936b6022aa6c2f7177abcf.jpg);
+}
+.deck .deck-flexer {
+  flex-grow: 1;
+}
+.deck .card-group {
+  flex-grow: 0;
+  position: relative;
+  display: inline-block;
+  margin-right: 100px;
+}
+.deck .card-group:first-child {
+  margin-left: 200px;
+}
+.flippable {
+  transition: transform 0.5s;
+}
+.flippable.flipped .flippable-content {
+  transform: rotateY(180deg);
+}
+.flippable .flippable-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.flippable .flippable-content .flippable-front,
+.flippable .flippable-content .flippable-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.flippable .flippable-content .flippable-back {
+  transform: rotateY(180deg);
+}
+body {
+  user-select: none;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0;
+  margin: 0;
+}
+body header.main-header,
+body ul.world-map {
+  margin: 10px;
+}
+
+
+/*# sourceMappingURL=main.css.map*/
